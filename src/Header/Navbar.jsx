@@ -20,7 +20,7 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
-        to="/apps"
+        to="/all-apps"
         className={({ isActive }) =>
           isActive
             ? "m-2 text-[#9F62F2] underline underline-offset-4 font-semibold"

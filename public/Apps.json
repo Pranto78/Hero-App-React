@@ -1,0 +1,362 @@
+[
+  {
+    "image": "https://i.ibb.co/YBn7s585/unnamed.png",
+    "title": "BuzzKill",
+    "companyName": "Cliff Weitzman / Android Independent",
+    "id": 1,
+    "description": "A notification management app that silences or groups notifications to reduce noise. It allows customizing vibration, sounds, and uses a 'cooldown' feature to suppress repeated messages from the same app in quick succession.",
+    "size": 4.8,
+    "reviews": 1500,
+    "ratingAvg": 4.3,
+    "downloads": 4,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 810 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/sJXbKpht/llama-location-profiles-logo.jpg",
+    "title": "Llama (Location Profiles)",
+    "companyName": "Independent developer",
+    "id": 2,
+    "description": "An app that uses mobile-tower info (no GPS required) to detect where you are, and change phone behavior accordingly. Useful for auto-switching profiles (silent, loud, etc.) depending on location without draining battery.",
+    "size": 3.6,
+    "reviews": 900,
+    "ratingAvg": 4.1,
+    "downloads": 5,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 610 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/LzBFhH5J/unnamed-1.png",
+    "title": "Overdrop Weather",
+    "companyName": "Overdrop Studios",
+    "id": 3,
+    "description": "Minimalist, stylish weather app with precise forecasts, clean UI, informative widgets, radar & severe weather alerts. Great for people who want both form and function in meteorology apps.",
+    "size": 25.2,
+    "reviews": 45000,
+    "ratingAvg": 4.5,
+    "downloads": 10,
+    "ratings": [
+      { "name": "1 star", "count": 1000 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 4000 },
+      { "name": "4 star", "count": 15000 },
+      { "name": "5 star", "count": 28000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/Q3zs4LS6/unnamed.webp",
+    "title": "Tiny Scanner",
+    "companyName": "Appxy",
+    "id": 4,
+    "description": "Turns your phone into a portable document scanner. Snap photos of documents/receipts/business cards, clean them up, and convert to PDFs. Great for travel, expenses, or record-keeping when you need to digitize stuff on the fly.",
+    "size": 11.4,
+    "reviews": 120000,
+    "ratingAvg": 4.6,
+    "downloads": 50,
+    "ratings": [
+      { "name": "1 star", "count": 2000 },
+      { "name": "2 star", "count": 1500 },
+      { "name": "3 star", "count": 8000 },
+      { "name": "4 star", "count": 35000 },
+      { "name": "5 star", "count": 117000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/0VQ2mDzm/AXaou-Rk-Y-400x400.jpg",
+    "title": "SecureTribe",
+    "companyName": "Just Two Dudes, LLC",
+    "id": 5,
+    "description": "A private & secure media sharing app. You form groups (“Tribes”) to share photos & videos end-to-end encrypted, decide who sees what, and whether others can upload or save media. Good for privacy-minded folks tired of social media data exposure. :contentReference[oaicite:0]{index=0}",
+    "size": 109.6,
+    "reviews": 3000,
+    "ratingAvg": 4.2,
+    "downloads": 38,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 450 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 1200 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/23198V5g/unnamed-2.png",
+    "title": "ClueKeeper",
+    "companyName": "ClueKeeper Inc.",
+    "id": 6,
+    "description": "Combines GPS, AR, and puzzle hunts. Authors can create location-based “hunts” with clues, trivia, and puzzles that unlock as you explore different real-world locations. Good for fun outdoor adventure & exploration. :contentReference[oaicite:1]{index=1}",
+    "size": 95.7,
+    "reviews": 800,
+    "ratingAvg": 4.4,
+    "downloads": 8,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 480 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/811Rprh/unnamed-3.png",
+    "title": "Depth Lab",
+    "companyName": "Google ARCore Labs",
+    "id": 7,
+    "description": "An experimental app that uses ARCore’s depth sensor to let users interact with depth maps in real life. You can observe realistic occlusion of virtual objects, measure distances, or create visuals that respond to depth. Great for AR hobbyists. :contentReference[oaicite:2]{index=2}",
+    "size": 130.0,
+    "reviews": 1200,
+    "ratingAvg": 4.0,
+    "downloads": 5,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 300 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/DD6PQhMf/tangibl-logo-blue-on-white-1.webp",
+    "title": "Tangibl",
+    "companyName": "EdTech Labs",
+    "id": 8,
+    "description": "For non-native English speakers: helps with spoken communication, job-interview practice, debates, roleplays, with both peer and AI feedback. Good for improving speaking confidence & real conversation skills. :contentReference[oaicite:3]{index=3}",
+    "size": 45.3,
+    "reviews": 800,
+    "ratingAvg": 4.3,
+    "downloads": 2,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 200 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/mV6PBX5z/unnamed-4.png",
+    "title": "Forest",
+    "companyName": "Seekrtech",
+    "id": 9,
+    "description": "A productivity-focused habit timer that gamifies staying focused: plant virtual trees that grow while you work, but die if you leave the app. Also partners with tree-planting organizations. Helps build solid habits in a fun way. (Frequently listed among hidden gem productivity apps.)",
+    "size": 30.0,
+    "reviews": 50000,
+    "ratingAvg": 4.7,
+    "downloads": 20,
+    "ratings": [
+      { "name": "1 star", "count": 1000 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 4000 },
+      { "name": "4 star", "count": 25000 },
+      { "name": "5 star", "count": 205000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/twSy3vhv/unnamed-5.png",
+    "title": "Slowly",
+    "companyName": "Slowly Communications Ltd.",
+    "id": 10,
+    "description": "A digital pen-pal app: write long, thoughtful letters to people around the world. Letters delivered after a delay depending on distance (simulating snail mail). Helps build meaningful connections away from instant messaging.",
+    "size": 52.7,
+    "reviews": 15000,
+    "ratingAvg": 4.5,
+    "downloads": 80,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 10700 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/0pbqBCD2/unnamed-6.png",
+    "title": "HERE WeGo / HERE Maps",
+    "companyName": "HERE Global B.V.",
+    "id": 11,
+    "description": "Offline-capable maps/navigation. Download regions and use full navigation without internet. Very useful for travelling, areas with poor connectivity, or saving data.",
+    "size": 80.3,
+    "reviews": 400000,
+    "ratingAvg": 4.4,
+    "downloads": 10,
+    "ratings": [
+      { "name": "1 star", "count": 8000 },
+      { "name": "2 star", "count": 6000 },
+      { "name": "3 star", "count": 25000 },
+      { "name": "4 star", "count": 100000 },
+      { "name": "5 star", "count": 860000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/twpr453S/unnamed-7.png",
+    "title": "PhotoMap Gallery",
+    "companyName": "Sergey Gorbatov",
+    "id": 12,
+    "description": "Maps your gallery photos by their geotags and lets you view your travel photo journal on an interactive map. Great for travel lovers or documenting where photos were taken.",
+    "size": 25.9,
+    "reviews": 2000,
+    "ratingAvg": 4.2,
+    "downloads": 9,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 550 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/twZ6hTXm/unnamed-8.png",
+    "title": "Pushbullet",
+    "companyName": "Pushbullet LLC",
+    "id": 13,
+    "description": "Helps to transmit files, links, or texts across your phone, tablet, and computer. Also mirrors notifications so you can see phone alerts on desktop. Excellent if you work across devices and dislike switching constantly.",
+    "size": 7.2,
+    "reviews": 120000,
+    "ratingAvg": 4.6,
+    "downloads": 8,
+    "ratings": [
+      { "name": "1 star", "count": 2500 },
+      { "name": "2 star", "count": 2000 },
+      { "name": "3 star", "count": 8000 },
+      { "name": "4 star", "count": 45000 },
+      { "name": "5 star", "count": 470000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/G4wxtfw0/unnamed-9.png",
+    "title": "IFTTT",
+    "companyName": "IFTTT Inc.",
+    "id": 14,
+    "description": "If This Then That: automate tasks across apps and devices via simple rules (‘applets’). For example, back up photos automatically, turn on lights when you arrive home, etc. Great for people wanting customized automation without coding.",
+    "size": 15.0,
+    "reviews": 200000,
+    "ratingAvg": 4.4,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 4000 },
+      { "name": "2 star", "count": 3500 },
+      { "name": "3 star", "count": 12000 },
+      { "name": "4 star", "count": 60000 },
+      { "name": "5 star", "count": 930000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/CstcdKYg/unnamed-10.png",
+    "title": "Universal Copy",
+    "companyName": "Camel Night Studio",
+    "id": 15,
+    "description": "Allows you to copy text from apps that don’t normally let you select text (e.g. images, locked UI elements). Super handy when you want to extract text from weird UIs or notifications without screenshotting and typing manually.",
+    "size": 5.4,
+    "reviews": 25000,
+    "ratingAvg": 4.5,
+    "downloads": 1,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 24500 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/svm2DYWx/images.jpg",
+    "title": "Qua Browser",
+    "companyName": "Independent / Open-Source",
+    "id": 16,
+    "description": "Privacy-focused web browser with minimal UI, fewer trackers, ad blocker built-in, optional themes. Good if you want lightweight and private browsing without sacrificing basic modern features.",
+    "size": 20.5,
+    "reviews": 10000,
+    "ratingAvg": 4.3,
+    "downloads": 3,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 9510 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/nM9wH59s/unnamed-11.png",
+    "title": "Photo & Picture Resizer",
+    "companyName": "Bright App",
+    "id": 17,
+    "description": "A fast tool to resize photos without a full photo-editor. Useful to reduce file sizes for uploads, saving space, or meeting resolution requirements without over-processing images.",
+    "size": 8.7,
+    "reviews": 15000,
+    "ratingAvg": 4.4,
+    "downloads": 80,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 14450 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/HLq5L8hm/unnamed-12.png",
+    "title": "Glitch Lab",
+    "companyName": "Guma Games",
+    "id": 18,
+    "description": "Photo editing app that gives retro / glitch / VHS style transformations. Lots of effects, customizations. Lots of fun for creators wanting something different than standard filters.",
+    "size": 35.4,
+    "reviews": 8000,
+    "ratingAvg": 4.2,
+    "downloads": 30,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 21000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/YBqTy4cG/unnamed-13.png",
+    "title": "Star Chart",
+    "companyName": "Escapist Games / Escapist Labs",
+    "id": 19,
+    "description": "Turn your phone into a virtual planetarium: point it at the sky and see names & positions of stars, constellations, planets. Includes info about astronomy, daily sky map. Cool for stargazing and learning astronomy.",
+    "size": 67.1,
+    "reviews": 25000,
+    "ratingAvg": 4.6,
+    "downloads": 10,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 232400 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/Z12h3h5V/unnamed-1.webp",
+    "title": "Brain Dump",
+    "companyName": "Independent Dev",
+    "id": 20,
+    "description": "A note-taking / thought capture tool. Quickly record ideas, voice thoughts, or sketches, which later are organized & summarized (AI or manually) so that creative flow isn't lost. Good for people who get ideas fast and hate losing them.",
+    "size": 28.6,
+    "reviews": 5000,
+    "ratingAvg": 4.4,
+    "downloads": 15,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 14600 }
+    ]
+  }
+]
