@@ -1,16 +1,31 @@
-import React from 'react';
-import Navbar from '../../Header/Navbar';
-import { Outlet } from 'react-router';
-import Footer from '../../Footer/Footer';
+import React, { Suspense } from "react";
+import Navbar from "../../Header/Navbar";
+import { Outlet, useNavigation } from "react-router";
+import Footer from "../../Footer/Footer";
+import Spinner from "../Spinner/Spinner";
 
 const Root = () => {
-    return (
-        <div>
-           <Navbar></Navbar>
-           <Outlet></Outlet>
-           <Footer></Footer>     
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading"; // Detects when navigation is happening
+
+  return (
+    <div>
+      <Navbar />
+
+      {/* Overlay spinner during navigation */}
+      {isLoading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-white/70 z-50">
+          <Spinner />
         </div>
-    );
+      )}
+
+      <Suspense fallback={<Spinner />}>
+        <Outlet />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default Root;

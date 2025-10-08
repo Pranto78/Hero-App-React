@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import dIcon from "../../assets/icon-downloads.png";
 import rIcon from "../../assets/icon-ratings.png";
 import { useLoaderData, useNavigate } from "react-router";
+import Spinner from "../Spinner/Spinner";
 
 const Apps = () => {
   const data = useLoaderData();
@@ -11,6 +12,8 @@ const Apps = () => {
   const limitedApps = data.slice(0, 8);
 
   return (
+
+    <Suspense fallback={<Spinner></Spinner>}>
     <div className="bg-[#f5f5f5] py-10">
       <div className="text-center max-w-[1400px] mx-auto">
         <h1 className="text-4xl font-bold">Trending Apps</h1>
@@ -42,7 +45,7 @@ const Apps = () => {
                   <h1>{app.downloads}M</h1>
                 </div>
 
-                <div className="flex items-center gap-2 w-[60px] bg-[#FFF0E1] p-2 rounded-lg">
+                <div className="flex items-center gap-2 w-[70px] bg-[#FFF0E1] p-2 rounded-lg">
                   <img className="h-[16px] w-[16px]" src={rIcon} alt="Ratings" />
                   <h1>{app.ratingAvg}</h1>
                 </div>
@@ -60,6 +63,8 @@ const Apps = () => {
         </button>
       </div>
     </div>
+
+    </Suspense>
   );
 };
 

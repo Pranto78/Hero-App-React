@@ -1,30 +1,28 @@
-import React from 'react';
-import { createBrowserRouter } from 'react-router';
-import Root from '../Components/Root/Root';
-import ErrorPage from '../Components/ErrorPage/ErrorPage';
-import Home from '../Components/Home/Home';
-import Apps from '../Components/Apps/Apps';
-import AllApps from '../Components/AllApps/AllApps';
+import React, { lazy, Suspense } from "react";
+import { createBrowserRouter } from "react-router";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
+
+
+const Root = lazy(() => import("../Components/Root/Root"));
+const Home = lazy(() => import("../Components/Home/Home"));
+const AllApps = lazy(() => import("../Components/AllApps/AllApps"));
 
 export const router = createBrowserRouter([
-    {
-        path:'/',
-        Component: Root,
-        errorElement: <ErrorPage></ErrorPage>,
-
-        children : [
-
-            {
-                index:true,
-                loader: ()=> fetch("Apps.json"),
-                path:'/',
-                Component: Home
-            },
-            {
-                path:'/all-apps',
-                loader: ()=> fetch("Apps.json"),
-                Component:AllApps
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <Root />, 
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        loader: () => fetch("Apps.json"),
+        element: <Home />, 
+      },
+      {
+        path: "/all-apps",
+        loader: () => fetch("Apps.json"),
+        element: <AllApps />, 
+      },
+    ],
+  },
+]);
