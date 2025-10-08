@@ -2,7 +2,7 @@ import React from 'react';
 
 import gImg from '../../assets/fi_16076057.png';
 import storeImg from '../../assets/Group.png';
-import heroImg from '../../assets/hero.png';
+
 
 const BannerOne = () => {
     return (
@@ -19,9 +19,7 @@ const BannerOne = () => {
 
                 </div>
 
-                <div className='flex justify-center mt-4'>
-                    <img src={heroImg} alt="" />
-                </div>
+                
         </div>
     );
 };
