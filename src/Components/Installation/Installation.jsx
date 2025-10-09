@@ -4,8 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Installation = () => {
   const [installedApps, setInstalledApps] = useState([]);
-  const [sortBy, setSortBy] = useState("large");
-  const [loading, setLoading] = useState(true); // ✅ spinner state
+  const [sortBy, setSortBy] = useState(""); // 👈 default empty
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -13,7 +13,7 @@ const Installation = () => {
       const stored = JSON.parse(localStorage.getItem("installedApps")) || [];
       setInstalledApps(stored);
       setLoading(false);
-    }, 800); // small delay for better UX
+    }, 800);
   }, []);
 
   const handleUninstall = (id) => {
@@ -23,11 +23,16 @@ const Installation = () => {
     toast.info("🗑️ Uninstalled Successfully!");
   };
 
+  
   const sortedApps = [...installedApps].sort((a, b) =>
-    sortBy === "large" ? b.size - a.size : a.size - b.size
+    sortBy === "high-low"
+      ? b.downloads - a.downloads
+      : sortBy === "low-high"
+      ? a.downloads - b.downloads
+      : 0
   );
 
-  // ✅ Spinner while loading
+ 
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-white bg-opacity-90">
@@ -44,7 +49,7 @@ const Installation = () => {
             Your Installed Apps
           </h1>
           <p className="text-gray-500 mt-2">
-            Explore All Trending Apps on the Market developed by us
+            Explore all trending apps on the market developed by us
           </p>
         </div>
 
@@ -58,8 +63,11 @@ const Installation = () => {
             onChange={(e) => setSortBy(e.target.value)}
             className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#9F62F2]"
           >
-            <option value="large">Sort by Large Size</option>
-            <option value="small">Sort by Small Size</option>
+            <option value="" disabled>
+              Sort by Downloads
+            </option>
+            <option value="high-low">High-Low: Most Downloads</option>
+            <option value="low-high">Low-High: Fewest Downloads</option>
           </select>
         </div>
 

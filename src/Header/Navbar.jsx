@@ -74,7 +74,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <a className="btn btn-ghost text-xl">
+          <a href="/" className="btn btn-ghost text-xl">
             <img className="h-[40px] w-[40px]" src={LogoImg} alt="" />
             <span className="text-[#9F62F2] font-bold ml-1">HERO.IO</span>
           </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end flex items-center gap-3">
-          <a className="btn bg-gradient-to-r from-[#9F62F2] to-[#632EE3] text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:opacity-90 transition">
+          <a href="https://github.com/Pranto78" target="blank" className="btn bg-gradient-to-r from-[#9F62F2] to-[#632EE3] text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:opacity-90 transition">
             <img src={GitLogo} alt="" /> Contribute
           </a>
         </div>

@@ -16,6 +16,7 @@ import {
 import dIcon from "../../assets/icon-downloads.png";
 import rIcon from "../../assets/icon-ratings.png";
 import lIcon from "../../assets/icon-review.png";
+import ErrorApp from "../ErrorPage/ErrorApp";
 
 const AppDetails = () => {
   const apps = useLoaderData();
@@ -43,7 +44,7 @@ const AppDetails = () => {
     }
   };
 
-  if (!SingleApp) return <ErrorPage />;
+  if (!SingleApp) return <ErrorApp></ErrorApp>;
 
   return (
     <div className="max-w-[1200px] mx-auto p-6">

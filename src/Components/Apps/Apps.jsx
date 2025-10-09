@@ -21,7 +21,7 @@ const Apps = () => {
           Explore All Trending Apps on the Market developed by us
         </p>
 
-        <div className="grid grid-cols-4 gap-5 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
           {limitedApps.map((app) => (
 
             <Link to={`/appDetails/${app.id}`}>

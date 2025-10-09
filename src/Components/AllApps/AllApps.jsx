@@ -5,47 +5,37 @@ import rIcon from "../../assets/icon-ratings.png";
 
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Spinner from "../Spinner/Spinner";
+import ErrorApp from "../ErrorPage/ErrorApp";
 
 const AllApps = () => {
   const AppData = useLoaderData();
   const [search, setSearch] = useState("");
   const [isSearching, setIsSearching] = useState(false);
-  const [loading, setLoading] = useState(true); // ✅ page spinner
+  const [loading, setLoading] = useState(true); // page load spinner
 
-  // ✅ Single useEffect handles both page load + search spinner
+  // ✅ One useEffect handles both loading and searching spinners
   useEffect(() => {
-    // show spinner on initial page load
-    const loadTimer = setTimeout(() => setLoading(false), 800);
+    const timer = setTimeout(() => setLoading(false), 800);
 
-    // handle spinner when searching
     if (search.trim() !== "") {
       setIsSearching(true);
       const searchTimer = setTimeout(() => setIsSearching(false), 500);
       return () => {
-        clearTimeout(loadTimer);
+        clearTimeout(timer);
         clearTimeout(searchTimer);
       };
     }
 
-    return () => clearTimeout(loadTimer);
+    return () => clearTimeout(timer);
   }, [search]);
 
   const filteredApps = AppData.filter((app) =>
     app.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  // ✅ Spinner when page loads
-  if (loading) {
-    return (
-      <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-[9999]">
-        <span className="loading loading-infinity loading-lg text-[#9F62F2] scale-[2]"></span>
-      </div>
-    );
-  }
-
   return (
-    <Suspense fallback={<Spinner></Spinner>}>
-      <div className="bg-[#f5f5f5] min-h-screen relative">
+    <Suspense fallback={<Spinner />}>
+      <div className="bg-[#f5f5f5] min-h-screen">
         <div className="text-center max-w-[1400px] mx-auto">
           <h1 className="text-4xl font-bold">Our All Application</h1>
           <p className="text-gray-600 mt-3">
@@ -88,18 +78,15 @@ const AllApps = () => {
             </label>
           </div>
 
-          {/* ✅ Spinner while searching */}
-          {isSearching && (
-            <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-[9999]">
+          {/* ✅ Spinner inside app area only */}
+          {(loading || isSearching) ? (
+            <div className="flex justify-center items-center h-[400px]">
               <span className="loading loading-infinity loading-lg text-[#9F62F2] scale-[2]"></span>
             </div>
-          )}
-
-          {/* ✅ ErrorPage if no match found */}
-          {filteredApps.length === 0 ? (
-            <ErrorPage />
+          ) : filteredApps.length === 0 ? (
+            <ErrorApp></ErrorApp>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 mb-5">
               {filteredApps.map((app) => (
                 <Link to={`/appDetails/${app.id}`} key={app.id}>
                   <div className="card bg-base-100 shadow-sm">
