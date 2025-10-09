@@ -15,7 +15,7 @@ const BannerOne = () => {
 
                 <div className='flex justify-center gap-3 mt-3'>
                     <a href='https://play.google.com/store/games?hl=en' target='blank' className="btn p-6 rounded-2xl btn-outline  btn-warning "><img src={gImg } alt="" /> Google Play</a>
-                    <a href='/' className="btn p-6 rounded-2xl btn-outline btn-info"><img src={storeImg} alt="" /> App Store</a>
+                    <a href='https://www.apple.com/app-store/' target='blank' className="btn p-6 rounded-2xl btn-outline btn-info"><img src={storeImg} alt="" /> App Store</a>
 
                 </div>
 
