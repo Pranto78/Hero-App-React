@@ -1,16 +1,73 @@
-# React + Vite
+Hero.io – App Installation Platform
+📖 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hero.io is a sleek and interactive web platform designed to make discovering and installing apps easier, faster, and more enjoyable.
+Users can explore trending apps, preview details, install their favorites, and manage their installed apps — all within a beautiful, responsive interface.
 
-Currently, two official plugins are available:
+🚀 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hero.io provides a seamless experience for exploring and managing apps directly from the browser.
+Each app comes with detailed information such as name, rating, download count, and size.
+Users can “install” apps with one click — simulating a real app installation process using browser localStorage.
 
-## React Compiler
+This project focuses on:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Smooth UI/UX built with React and Tailwind CSS
 
-## Expanding the ESLint configuration
+Smart app sorting and management
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Toast notifications for real-time feedback
+
+Persistent localStorage functionality for installed apps
+
+🧠 Key Features
+
+✅ Browse and preview apps
+✅ Install apps with one click
+✅ "Install Now" button disables after installation
+✅ Toast notification confirms successful installation
+✅ Installed apps are saved in localStorage
+✅ Uninstall apps anytime
+✅ Toast confirms uninstallation success
+✅ Sort apps by download count (High → Low or Low → High)
+✅ Responsive, fast, and clean design
+
+🛠️ Technologies Used
+
+React.js – Frontend framework
+
+Tailwind CSS – Modern UI styling
+
+React Toastify – Toast notifications
+
+LocalStorage API – Persistent data management
+
+Vite / Create React App – Development environment
+
+🧩 How It Works
+
+Open the All Apps page.
+
+Browse through the available apps.
+
+Click the “Install Now” button to install any app.
+
+The button will be disabled after installation.
+
+A toast message will appear saying:
+
+✅ Installed Successfully!
+
+The app will be stored in the browser’s localStorage under the key "installedApps".
+
+Go to the Installation page to view all installed apps.
+
+Click “Uninstall” to remove an app.
+
+It will disappear from the UI.
+
+It will also be removed from localStorage.
+
+A toast message will appear saying:
+
+🗑️ Uninstalled Successfully!
