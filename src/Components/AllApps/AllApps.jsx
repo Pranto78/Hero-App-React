@@ -111,7 +111,7 @@ const AllApps = () => {
                         />
                         <h1>{app.downloads}M</h1>
                       </div>
-                      <div className="flex items-center gap-2 w-[60px] bg-[#FFF0E1] p-2 rounded-lg">
+                      <div className="flex items-center gap-2 w-[70px] bg-[#FFF0E1] p-2 rounded-lg">
                         <img
                           className="h-[16px] w-[16px]"
                           src={rIcon}
