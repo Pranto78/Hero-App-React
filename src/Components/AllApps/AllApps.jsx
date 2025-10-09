@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useEffect } from "react";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import dIcon from "../../assets/icon-downloads.png";
 import rIcon from "../../assets/icon-ratings.png";
 
@@ -11,7 +11,7 @@ const AllApps = () => {
   const [search, setSearch] = useState("");
   const [isSearching, setIsSearching] = useState(false);
 
-  // ✅ Show spinner while typing/searching
+  
   useEffect(() => {
     if (search.trim() === "") {
       setIsSearching(false);
@@ -22,7 +22,7 @@ const AllApps = () => {
     return () => clearTimeout(timer);
   }, [search]);
 
-  // Filter apps based on search text
+  
   const filteredApps = AppData.filter((app) =>
     app.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -85,6 +85,7 @@ const AllApps = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
               {filteredApps.map((app) => (
+                <Link to={`/appDetails/${app.id}`}>
                 <div key={app.id} className="card bg-base-100 shadow-sm">
                   <figure className="p-5">
                     <img
@@ -115,6 +116,7 @@ const AllApps = () => {
                     </div>
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
           )}
