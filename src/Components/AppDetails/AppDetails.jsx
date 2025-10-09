@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useLoaderData, useParams } from "react-router";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import ErrorPage from "../ErrorPage/ErrorPage";
-
 import {
   BarChart,
   Bar,
@@ -22,9 +23,27 @@ const AppDetails = () => {
   const appId = parseInt(id);
   const SingleApp = apps.find((item) => item.id === appId);
 
-  if (!SingleApp) {
-    return <ErrorPage />;
-  }
+  const [isInstalled, setIsInstalled] = useState(false);
+
+  useEffect(() => {
+    const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+    const alreadyInstalled = installedApps.find((app) => app.id === appId);
+    if (alreadyInstalled) setIsInstalled(true);
+  }, [appId]);
+
+  const handleInstall = () => {
+    const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+    const exists = installedApps.find((app) => app.id === appId);
+
+    if (!exists) {
+      installedApps.push(SingleApp);
+      localStorage.setItem("installedApps", JSON.stringify(installedApps));
+      setIsInstalled(true);
+      toast.success("✅ Installed Successfully!");
+    }
+  };
+
+  if (!SingleApp) return <ErrorPage />;
 
   return (
     <div className="max-w-[1200px] mx-auto p-6">
@@ -62,8 +81,18 @@ const AppDetails = () => {
             </div>
           </div>
 
-          <button className="btn btn-success text-white mt-6">
-            Install Now ({SingleApp.size} MB)
+          <button
+            onClick={handleInstall}
+            disabled={isInstalled}
+            className={`mt-6 px-6 py-2 rounded-lg text-white font-semibold transition ${
+              isInstalled
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-green-500 hover:bg-green-600"
+            }`}
+          >
+            {isInstalled
+              ? "Installed"
+              : `Install Now (${SingleApp.size} MB)`}
           </button>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Navbar from "../../Header/Navbar";
 import { Outlet, useNavigation } from "react-router";
 import Footer from "../../Footer/Footer";
 import Spinner from "../Spinner/Spinner";
+import { ToastContainer } from "react-toastify";
 
 const Root = () => {
   const navigation = useNavigation();
@@ -24,6 +25,8 @@ const Root = () => {
       </Suspense>
 
       <Footer />
+
+      <ToastContainer position="top-center" autoClose={2000} />
     </div>
   );
 };

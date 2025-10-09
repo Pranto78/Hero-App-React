@@ -10,22 +10,38 @@ const AllApps = () => {
   const AppData = useLoaderData();
   const [search, setSearch] = useState("");
   const [isSearching, setIsSearching] = useState(false);
+  const [loading, setLoading] = useState(true); // ✅ page spinner
 
-  
+  // ✅ Single useEffect handles both page load + search spinner
   useEffect(() => {
-    if (search.trim() === "") {
-      setIsSearching(false);
-      return;
+    // show spinner on initial page load
+    const loadTimer = setTimeout(() => setLoading(false), 800);
+
+    // handle spinner when searching
+    if (search.trim() !== "") {
+      setIsSearching(true);
+      const searchTimer = setTimeout(() => setIsSearching(false), 500);
+      return () => {
+        clearTimeout(loadTimer);
+        clearTimeout(searchTimer);
+      };
     }
-    setIsSearching(true);
-    const timer = setTimeout(() => setIsSearching(false), 500); // small delay
-    return () => clearTimeout(timer);
+
+    return () => clearTimeout(loadTimer);
   }, [search]);
 
-  
   const filteredApps = AppData.filter((app) =>
     app.title.toLowerCase().includes(search.toLowerCase())
   );
+
+  // ✅ Spinner when page loads
+  if (loading) {
+    return (
+      <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-[9999]">
+        <span className="loading loading-infinity loading-lg text-[#9F62F2] scale-[2]"></span>
+      </div>
+    );
+  }
 
   return (
     <Suspense fallback={<Spinner></Spinner>}>
@@ -72,50 +88,52 @@ const AllApps = () => {
             </label>
           </div>
 
-          {/* ✅ Show spinner while searching */}
+          {/* ✅ Spinner while searching */}
           {isSearching && (
             <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-[9999]">
               <span className="loading loading-infinity loading-lg text-[#9F62F2] scale-[2]"></span>
             </div>
           )}
 
-          {/* ✅ Show ErrorPage if no match found */}
+          {/* ✅ ErrorPage if no match found */}
           {filteredApps.length === 0 ? (
             <ErrorPage />
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
               {filteredApps.map((app) => (
-                <Link to={`/appDetails/${app.id}`}>
-                <div key={app.id} className="card bg-base-100 shadow-sm">
-                  <figure className="p-5">
-                    <img
-                      src={app.image}
-                      alt={app.title}
-                      className="rounded-xl h-[300px] w-[300px]"
-                    />
-                  </figure>
-
-                  <h1 className="text-left font-bold mb-2 pl-7">{app.title}</h1>
-
-                  <div className="flex justify-between items-center px-10 mb-2">
-                    <div className="flex items-center gap-2 w-[70px] bg-[#F1F5E8] p-2 rounded-lg">
+                <Link to={`/appDetails/${app.id}`} key={app.id}>
+                  <div className="card bg-base-100 shadow-sm">
+                    <figure className="p-5">
                       <img
-                        className="h-[16px] w-[16px]"
-                        src={dIcon}
-                        alt="Downloads"
+                        src={app.image}
+                        alt={app.title}
+                        className="rounded-xl h-[300px] w-[300px]"
                       />
-                      <h1>{app.downloads}M</h1>
-                    </div>
-                    <div className="flex items-center gap-2 w-[60px] bg-[#FFF0E1] p-2 rounded-lg">
-                      <img
-                        className="h-[16px] w-[16px]"
-                        src={rIcon}
-                        alt="Rating"
-                      />
-                      <h1>{app.ratingAvg}5</h1>
+                    </figure>
+
+                    <h1 className="text-left font-bold mb-2 pl-7">
+                      {app.title}
+                    </h1>
+
+                    <div className="flex justify-between items-center px-10 mb-2">
+                      <div className="flex items-center gap-2 w-[70px] bg-[#F1F5E8] p-2 rounded-lg">
+                        <img
+                          className="h-[16px] w-[16px]"
+                          src={dIcon}
+                          alt="Downloads"
+                        />
+                        <h1>{app.downloads}M</h1>
+                      </div>
+                      <div className="flex items-center gap-2 w-[60px] bg-[#FFF0E1] p-2 rounded-lg">
+                        <img
+                          className="h-[16px] w-[16px]"
+                          src={rIcon}
+                          alt="Rating"
+                        />
+                        <h1>{app.ratingAvg}5</h1>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </Link>
               ))}
             </div>

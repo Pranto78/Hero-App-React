@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import AppDetails from "../Components/AppDetails/AppDetails";
+import Installation from "../Components/Installation/Installation";
 
 
 const Root = lazy(() => import("../Components/Root/Root"));
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
         path: "/appDetails/:id",
         loader: () => fetch("/Apps.json"),
         element: <AppDetails></AppDetails>
+      },
+      {
+        path: "/installation",
+        element:<Installation></Installation>
       }
     ],
   },

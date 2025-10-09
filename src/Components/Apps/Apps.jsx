@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import dIcon from "../../assets/icon-downloads.png";
 import rIcon from "../../assets/icon-ratings.png";
-import { useLoaderData, useNavigate } from "react-router";
+import { Link, useLoaderData, useNavigate } from "react-router";
 import Spinner from "../Spinner/Spinner";
 
 const Apps = () => {
@@ -23,6 +23,8 @@ const Apps = () => {
 
         <div className="grid grid-cols-4 gap-5 mt-8">
           {limitedApps.map((app) => (
+
+            <Link to={`/appDetails/${app.id}`}>
             <div
               key={app.id}
               className="card bg-base-100 shadow-sm hover:shadow-lg transition-all rounded-2xl"
@@ -51,6 +53,7 @@ const Apps = () => {
                 </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
 
