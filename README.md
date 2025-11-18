@@ -1,73 +1,82 @@
-Hero.io – App Installation Platform
-📖 Overview
+# 🚀 Hero.io – App Installation Platform
 
-Hero.io is a sleek and interactive web platform designed to make discovering and installing apps easier, faster, and more enjoyable.
-Users can explore trending apps, preview details, install their favorites, and manage their installed apps — all within a beautiful, responsive interface.
+## 📖 Overview
+Hero.io is a sleek and interactive web platform designed to make discovering and installing apps easier, faster, and more enjoyable.  
+Users can explore trending apps, preview details, install their favorites, and manage installed apps — all within a beautiful, responsive interface.
 
-🚀 Description
+---
 
-Hero.io provides a seamless experience for exploring and managing apps directly from the browser.
-Each app comes with detailed information such as name, rating, download count, and size.
-Users can “install” apps with one click — simulating a real app installation process using browser localStorage.
+## 🌟 Description
+Hero.io provides a seamless experience for exploring and managing apps directly from the browser.  
+Each app includes detailed information such as **name, rating, download count, and size**.  
+Users can “install” apps with one click — simulating real app installation using **browser localStorage**.
 
-This project focuses on:
+This project emphasizes:  
+- Smooth UI/UX built with React and Tailwind CSS  
+- Smart app sorting and management  
+- Toast notifications for real-time feedback  
+- Persistent localStorage functionality for installed apps  
 
-Smooth UI/UX built with React and Tailwind CSS
+---
 
-Smart app sorting and management
+## 🧠 Key Features
 
-Toast notifications for real-time feedback
+- ✅ Browse and preview apps  
+- ✅ Install apps with one click  
+- ✅ "Install Now" button disables after installation  
+- ✅ Toast notification confirms successful installation  
+- ✅ Installed apps are saved in **localStorage**  
+- ✅ Uninstall apps anytime  
+- ✅ Toast confirms uninstallation success  
+- ✅ Sort apps by download count (High → Low / Low → High)  
+- ✅ Responsive, fast, and clean design  
 
-Persistent localStorage functionality for installed apps
+---
 
-🧠 Key Features
+## 🛠️ Technologies Used
 
-✅ Browse and preview apps
-✅ Install apps with one click
-✅ "Install Now" button disables after installation
-✅ Toast notification confirms successful installation
-✅ Installed apps are saved in localStorage
-✅ Uninstall apps anytime
-✅ Toast confirms uninstallation success
-✅ Sort apps by download count (High → Low or Low → High)
-✅ Responsive, fast, and clean design
+- **React.js** – Frontend framework  
+- **Tailwind CSS** – Modern UI styling  
+- **React Toastify** – Toast notifications  
+- **LocalStorage API** – Persistent data management  
+- **Vite / Create React App** – Development environment  
 
-🛠️ Technologies Used
+---
 
-React.js – Frontend framework
+## 🧩 How It Works
 
-Tailwind CSS – Modern UI styling
+1. Open the **All Apps** page.  
+2. Browse through the available apps.  
+3. Click the **“Install Now”** button to install any app.  
+   - The button will disable after installation.  
+   - A toast message appears: ✅ Installed Successfully!  
+   - The app is stored in **localStorage** under the key `"installedApps"`.  
+4. Go to the **Installation page** to view all installed apps.  
+5. Click **“Uninstall”** to remove an app.  
+   - The app disappears from the UI and is removed from **localStorage**.  
+   - A toast message appears: 🗑️ Uninstalled Successfully!  
 
-React Toastify – Toast notifications
+---
 
-LocalStorage API – Persistent data management
+## 📷 Screenshots
 
-Vite / Create React App – Development environment
+<p align="center">
+  <img src="https://github.com/Pranto78/Hero-App-React/blob/main/Screenshot%202025-11-19%20004741.png" width="80%" alt="All Apps Page Screenshot"/>
+</p>
 
-🧩 How It Works
+<p align="center">
+  <img src="https://github.com/Pranto78/Hero-App-React/blob/main/Screenshot%202025-11-19%20004757.png" width="80%" alt="Installed Apps Screenshot"/>
+</p>
 
-Open the All Apps page.
+<p align="center">
+  <img src="https://github.com/Pranto78/Hero-App-React/blob/main/Screenshot%202025-11-19%20004817.png" width="80%" alt="Installed Apps Screenshot"/>
+</p>
 
-Browse through the available apps.
+---
 
-Click the “Install Now” button to install any app.
+## 🚀 Live Demo & Links
 
-The button will be disabled after installation.
+- **Live Site:** https://effortless-moxie-2e2874.netlify.app/  
 
-A toast message will appear saying:
+---
 
-✅ Installed Successfully!
-
-The app will be stored in the browser’s localStorage under the key "installedApps".
-
-Go to the Installation page to view all installed apps.
-
-Click “Uninstall” to remove an app.
-
-It will disappear from the UI.
-
-It will also be removed from localStorage.
-
-A toast message will appear saying:
-
-🗑️ Uninstalled Successfully!
